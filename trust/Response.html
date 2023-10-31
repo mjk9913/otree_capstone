@@ -1,0 +1,29 @@
+{{ block title }}<div style="display: flex; flex-direction: column; align-items: center;">Your compensation method chosen by your employer, Participant A.</div>{{ endblock }}
+{{ block content }}
+<p> You are: Participant B. </p>
+
+<p> You have an endowment of ${{player.endow}} to begin with. <br> <br>
+    Your employer, Participant A's, probability of receiving an additional reward increases proportionally to the number of times you successfully accomplishes the task of counting arrows in the matrice. <br>
+ 
+    You are compensated with the following compensation method. <br> <br>
+    {{if group.option == 0}}
+    <p>
+        <b> 
+        Constant wage:<br> You will be compensated regardless of whether Participant A receive the additional reward and regardless of how many successful tasks you accomplish.
+        </b>
+        
+    </p>
+
+    {{else}}
+    <p>
+        <b>You will only be rewarded if you reach a minimum target of tasks successfully accomplished. Your employer has set a minimum target of {{group.option}}. </b>
+        <br> <br>
+        <br> <br>
+    </p>
+
+    {{endif}}
+    <br><br>
+    *Participant A will not be informed of how many times you accomplish the task, but only if they are successful in receiving the additional reward
+    <br><br>
+    <p><div style="display: flex; flex-direction: column; align-items: center;">Click next to continue and accept your contract: {{ next_button }}</div></p>
+{{ endblock }}

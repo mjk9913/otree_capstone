@@ -1,0 +1,10 @@
+{% block title %}
+    <div style="text-align: center;">Introduction</div>
+{% endblock %}
+
+{% block content %}
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        {{ include_sibling 'instructions.html' }}
+        <div>{{ next_button }}</div>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{{ block title }}<div style="display: flex; flex-direction: column; align-items: center">Your Task</div>{{ endblock }}
+{{ block content }}
+<p>
+    <div style="display: flex; flex-direction: column; align-items: center;">You are: <b>Participant B </b><br> </div>
+
+<br> <br>
+You will be given a matrix that looks like the image below. <br>
+<img src="{{'trust/_static/images/matrix.png' }}"/>
+<br> <br>
+Count how many "->" there are in the image, and type & submit the answer. <br>
+You will have 60 seconds to answer correctly how many "->" there are in the matrix.
+<p>
+Task will begin once you click on the next button.
+<p>{{ next_button }}</p>
+</p> 
+
+{{ endblock }}

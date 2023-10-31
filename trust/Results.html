@@ -1,0 +1,23 @@
+{{ block title }}Results{{ endblock }}
+{{ block content }}
+
+    {{ if player.id_in_group == 1 }}
+        <p>
+            You are rewarded <b>{{player.payoff}}</b>.
+        </p>
+
+    {{ else }}
+        <p>
+            {{if group.option == 0}}
+                You have successfully accomplished the tasks <b>{{group.resultA}}</b> number of times. <br>
+                Participant A has chosen a constant wage for you. Hence, you are rewarded <b>{{player.payoff}}</b> regardless of your task accomplishment.
+            {{else}}
+                With Participant A setting a minimum task goal of <b>{{group.option}}</b> and you successfully accomplishing {{player.num_correct}} number of tasks; <br> 
+                You are rewarded <b>{{player.payoff}}</b>.
+            {{endif}}
+        </p>
+    {{ endif }}
+
+    <p>{{ next_button }}</p>
+
+{{ endblock }}

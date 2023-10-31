@@ -1,0 +1,27 @@
+{{ block title }}<div style="display: flex; flex-direction: column; align-items: center">Your Task </div>{{ endblock }}
+{{ block content }}
+<p>
+<div style="display: flex; flex-direction: column; align-items: center;">Round 2 of Compensation Selection </b> </div> <br>
+As depicted previously, you have an endowment of ${{player.endow}} to begin with. With each round, you are capable of earning a $12 in additional reward.
+<br>
+However, whether you are awarded the additional reward is dependent on Participant B's performance of completing a certain task provided. <br> <br>
+Participant B is given the opportunity to complete this task a total of 20 times. <br>
+Your probability of receiving the additional reward increases proportionally to the number of times Participant B successfully accomplishes the task. 
+In other words, you are more likely to receive the additional reward as Participant B successfully finishes the task for a greater number of times.
+<br> <br>
+Once Participant B finishes performing the tasks, you will be informed to whether you have received the additional reward based on the probability adjusted by Participant B's performance.
+<br><br>
+For Participant B to participate in completing the certain task, you are required to compensate $5 to Participant B from your endowment.
+You have two ways of compensating Participant B: <br> <br>
+<b> 1. Constant wage (0): </b> <br> Participant B will be compensated regardless of whether you receive the additional reward. To select this option, choose the compensation choice as <b>0</b>. <br> <br>
+<b> 2. Performance-contigent pay (1-20): </b> <br> Participant B will only be compensated if you receive the additional reward. To select this option, select the compensation choice as <b>the minimum number of tasks Pariticpant B has to accomplish</b>.  
+</p>
+
+<p>
+<div style="display: flex; flex-direction: column; align-items: center">
+{{ formfield "option" }}
+{{ next_button }}
+</div>
+</p>
+
+{{ endblock }}

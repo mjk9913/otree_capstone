@@ -1,0 +1,48 @@
+{{ block title }}<div style="display: flex; flex-direction: column; align-items: center">Your Task</div>{{ endblock }}
+{{ block content }}
+<p>
+    <div style="display: flex; flex-direction: column; align-items: center;">You are: <b>Participant B </b><br> </div>
+
+<br> <br>
+You will be playing the game again. <br>
+<img src="{{'trust/_static/images/matrix.png' }}"/>
+<br>
+As a reminder, <br>
+Count how many "->" there are in the image, and type & submit the answer. <br>
+You will be compensated more if you are able to answer correctly a greater number of times. <br>
+You will have 60 seconds to answer correctly how many "->" there are in the matrix.
+<p>
+Task will begin once you click on the next button.
+<br> <br>
+
+<p> Reminder: You have an endowment of ${{player.endow}} to begin with. <br> <br>
+    You are able to gain an additional $5, if Participant A is able to successfully gain an additional reward. <br>
+    Participant A's probability of receiving the additional reward increases proportionally to the number of times you successfully accomplishes the task. <br> <br>
+ 
+    Participant A had two compensation methods to choose to reward you for your participation for this round and they chose the following for you: <br>
+    {{if group.option == 0}}
+    <p>
+        
+        <b>Constant wage:</b><br> You will be compensated regardless of whether Participant A receive the additional reward and regardless of how many successful tasks you accomplish.
+        <br> <br>
+        The <b>other compensation method </b> Participant A could have selected was <b>contingent compensation form</b>: <br>
+        You will only be rewarded if you reach a minimum target of tasks successfully accomplished. 
+    </p>
+
+    {{else}}
+    <p>
+        <b>Contingent compensation form:</b> You will only be rewarded if you reach a minimum target of tasks successfully accomplished. Your employer has set a minimum target of {{group.option}}.
+        <br> <br>
+        The <b>other compensation method</b> Participant A could have selected was <b>Constant wage</b>:
+        <br> You will be compensated regardless of whether Participant A receive the additional reward and regardless of how many successful tasks you accomplish.
+        <br> <br>
+    </p>
+
+    {{endif}}
+    <br><br>
+    *Participant A will not be informed of how many times you accomplish the task, but only if they are successful in receiving the additional reward
+    <br><br>
+<p>{{ next_button }}</p>
+</p> 
+
+{{ endblock }}
